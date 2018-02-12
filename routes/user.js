@@ -32,7 +32,7 @@ module.exports = function (app) {
 				first_name,
 				last_name,
 				user_name
-			FROM users
+			FROM brugere
 			WHERE
 				user_name = ? AND password = ?
 		`;
@@ -88,7 +88,7 @@ module.exports = function (app) {
 		if (name != "" && pass != "") {
 
 			var sql = `
-				INSERT INTO users
+				INSERT INTO brugere
 				SET
 					first_name = ?,
 					last_name = ?,
@@ -134,7 +134,7 @@ module.exports = function (app) {
 			return;
 		}
 
-		var sql = "SELECT * FROM users WHERE id = ?";
+		var sql = "SELECT * FROM brugere WHERE id = ?";
 
 		db.query(sql, [userId], function (err, results) {
 			res.render('admin/pages/dashboard', {
@@ -155,7 +155,7 @@ module.exports = function (app) {
 			return;
 		}
 
-		var sql = "SELECT * FROM users WHERE id = ?";
+		var sql = "SELECT * FROM brugere WHERE id = ?";
 		db.query(sql, [userId], function (err, result) {
 			res.render('admin/pages/profile', {
 				data: result
