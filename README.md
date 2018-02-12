@@ -7,10 +7,10 @@
 * Alexander:  Backend
 * Jonas:  Javascript - frontend
 * Marie: HTML / CSS
-* Tenna:  Fleksibel
+* Tenna:  Backend
 * Emil S: Frontend
-* Emil: Fleksibel
-* Martin:  Routes / API
+* Emil: Backend
+* Martin:  Backend
 * Julie:  Backend
 * Kasper:  Backend
 >>>>>>> d328c1716dacfa03096df08bfdffc28dc7560a8d
