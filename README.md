@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Frisør - Hold 1
-=======
 # frisoer_hold1
 
 ## Hvem laver hvad?
@@ -13,4 +10,3 @@
 * Martin:  Backend
 * Julie:  Backend
 * Kasper:  Backend
->>>>>>> d328c1716dacfa03096df08bfdffc28dc7560a8d
