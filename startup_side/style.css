@@ -32,3 +32,6 @@ body, html {
 .nav>li>a:hover, .nav>li>a:focus{
     background-color:#1A1A1A !important;
 }
+.carousel-control.right, .carousel-control.left{
+    background: 0 !important;
+}
