@@ -1,5 +1,5 @@
 const express = require('express');
-menu = require('./views/json_data/menu_items');
+menu = require('./json_data/menu_items');
 const app = express();
 const path = require('path');
 const session = require('express-session');
@@ -27,7 +27,7 @@ app.use(session({
 }));
 
 
-require("./routes/user")(app);
+require("./routes/handler")(app);
 
 app.listen(port);
 console.log(`http://localhost:${port}/`);
