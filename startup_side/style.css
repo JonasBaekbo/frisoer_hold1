@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+    width: 1040px;
+    margin: 0 auto;
+    background-color: #1A1A1A;
+    color: #FFF;
+}
+#container{
+    background-color: #1A1A1A;
+    color: #FFF;
+}
+
+.parallax {
+    /* The image used */
+    background-color: #FFF;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+    margin: 0 auto;
+}
+#navbar>.navbar-nav>li>a{
+    color: #FFF;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+    background-color:#1A1A1A !important;
+}
