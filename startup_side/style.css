@@ -35,6 +35,9 @@ nav .svg-inline--fa {
 .space{
     margin-top: 5em;  
   }
+  .booking{
+    margin-top: 15em;  
+  }
   .omos{
       font-size: 17px;
   }
@@ -59,3 +62,10 @@ nav .svg-inline--fa {
     .table>tbody>tr>td {
         border-top-color: #1a1a1a !important;
     }
+    .billeder{
+        padding-bottom: 40px;
+    }
+    .produkter{
+        margin-bottom: 10px;
+    }
+    

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calender.css">
     <title>Sample Site</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -199,6 +200,113 @@
                     </tbody>
                 </table>
             </div>
+
+        </div>
+        <div class="booking col-md-offset-6">
+            <div class="clearfix wrap">
+                <div class="instructions">
+                    <h3>Booking</h3>
+                    <div class="first">Vælg en frisør</div>
+                </div>
+                <div class="staff">
+                    <div class="member">
+                        <div class="avatar" style="background-image:  url('./images/frank.jpg')"></div>
+                        <div class="name">Frank Goldmann - TLF. 12 34 56 78</div>
+                        <div class="deselect-member">Ændre</div>
+                        <div class="deselect-date">Ændre</div>
+                        <div class="deselect-slot">Ændre</div>
+                        <div class="calendar"></div>
+                        <ul class="slots"></ul>
+                        <form class="form">
+                            <label>Navn</label>
+                            <input type="text" name="name" required="required" />
+                            <label>Telefonnummer</label>
+                            <input id="telNo" type="tel">
+                            <input type="submit" value="Godkend booking" />
+                        </form>
+                        <div class="confirm-message">Booking Gennemført!
+                            <span class="restart">Vil du booke igen?</span>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="avatar" style="background-image:  url('./images/ady.jpg')"></div>
+                        <div class="name">Ady Moussa - TLF. 23 45 67 89</div>
+                        <div class="deselect-member">Ændre</div>
+                        <div class="deselect-date">Ændre</div>
+                        <div class="deselect-slot">Ændre</div>
+                        <div class="calendar"></div>
+                        <ul class="slots"></ul>
+                        <form class="form">
+                            <label>Navn</label>
+                            <input type="text" name="name" required="required" />
+                            <label>Telefonnummer</label>
+                            <input id="telNo" type="tel">
+                            <input type="submit" value="Godkend booking" />
+                        </form>
+                        <div class="confirm-message">Booking Gennemført!
+                            <span class="restart">Vil du booke igen?</span>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="avatar" style="background-image: url('./images/hannah.jpg')"></div>
+                        <div class="name">Hannah Hansen - TLF. 12 43 56 87</div>
+                        <div class="deselect-member">Ændre</div>
+                        <div class="deselect-date">Ændre</div>
+                        <div class="deselect-slot">Ændre</div>
+                        <div class="calendar"></div>
+                        <ul class="slots"></ul>
+                        <form class="form">
+                            <label>Navn</label>
+                            <input type="text" name="name" required="required" />
+                            <label>Telefonnummer</label>
+                            <input id="telNo" type="tel">
+                            <input type="submit" value="Godkend booking" />
+                        </form>
+                        <div class="confirm-message">Booking Gennemført!
+                            <span class="restart">Vil du booke igen?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix produkter">
+            <div class="col-md-6">
+                <img class="col-md-10 billeder" src="images/Hairwax.jpg">
+                <h3>Overskrift 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat todquam quaerat
+                    voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat todquam quaerat voluptatem.
+                </p>
+                <img class="col-md-10 billeder" src="images/Hairwax.jpg">
+            </div>
+            <div class="col-md-6">
+                <h3>Overskrift 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat todquam quaerat
+                    voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat todquam quaerat voluptatem.
+                </p>
+                <img class="col-md-10 billeder" src="images/Hairwax.jpg" class="billeder">
+                <h3>Overskrift 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat todquam quaerat
+                    voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat todquam quaerat voluptatem.
+                </p>
+            </div>
         </div>
         <!-- Mangler indhold -->
         <footer>
@@ -208,6 +316,169 @@
         </footer>
 
     </div>
+    <script>
+        $(".member").on("click", function () {
+            if (!$(this).hasClass("selected")) {
+                $(this).addClass("selected");
+                $(".wrap").addClass("member-selected");
+                addCalendar($(this).find(".calendar"));
+            }
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        $(".deselect-member, .restart").on("click", function (e) {
+            $(".member").removeClass("selected");
+            $(".wrap").removeClass(
+                "member-selected date-selected slot-selected booking-complete"
+            );
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        $(".deselect-date").on("click", function (e) {
+            $(".wrap").removeClass("date-selected slot-selected");
+            $(".calendar *").removeClass("selected");
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        $(".deselect-slot").on("click", function (e) {
+            $(".wrap").removeClass("slot-selected");
+            $(".slots *").removeClass("selected");
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        $(".form").on("submit", function (e) {
+            $(".wrap").toggleClass("booking-complete");
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        function invokeCalendarListener() {
+            $(".calendar td:not(.disabled)").on("click", function (e) {
+                addSlots();
+                var date = $(this).html();
+                var day = $(this).data("day");
+                $(".date").html(day + " d. " + date);
+                $(this).addClass("selected");
+                setTimeout(function () {
+                    $(".wrap").addClass("date-selected");
+                }, 10);
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        }
+
+        function invokeSlotsListener() {
+            $(".slots li").on("click", function (e) {
+                $(this).addClass("selected");
+                $(".wrap").addClass("slot-selected");
+                setTimeout(function () {
+                    $('.selected.member input[name="name"]').focus();
+                }, 700);
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        }
+
+        function addSlots(container) {
+            var number = Math.ceil(Math.random() * 4 + 1);
+            var time = 7;
+            var endings = [":00", ":20", ":40"];
+            var timeDisplay = "";
+            var slots = "";
+            for (var i = 0; i < number; i++) {
+                time += Math.ceil(Math.random() * 3);
+                timeDisplay = time + endings[Math.floor(Math.random() * 3)];
+                slots += "<li>" + timeDisplay + "</li>";
+            }
+
+            $(".selected .slots").html(slots);
+
+            invokeSlotsListener();
+        }
+
+        function addCalendar(container) {
+            //get dates
+            var today = new Date();
+            var day = today.getDay();
+            var date = today.getDate();
+            var month = today.getMonth();
+            var year = today.getFullYear();
+            var first = new Date();
+            first.setDate(1);
+            var startDay = first.getDay();
+            var dayLabels = ["S", "M", "T", "O", "T", "F", "L"];
+            var monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            var monthNames = [
+                "Januar",
+                "Februar",
+                "Marts",
+                "April",
+                "Maj",
+                "Juni",
+                "Juli",
+                "August",
+                "Sepember",
+                "Oktober",
+                "November",
+                "December"
+            ];
+            var dayNames = ["Lørdag", "Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"];
+
+            var current = 1 - startDay;
+
+            //assemble calendar
+            var calendar =
+                `<label class="date"></label><label class="month">${monthNames[month]} ${year}</label>`;
+
+            calendar += "<table><tr>";
+            dayLabels.forEach(function (label) {
+                calendar += "<th>" + label + "</th>";
+            });
+            calendar += "</tr><tr>";
+            var dayClasses = "";
+            while (current <= 30) {
+                if (current > 0) {
+                    dayClasses = "";
+                    today.setDate(current);
+                    if (today.getDay() == 0 || today.getDay() == 6) {
+                        dayClasses += " disabled";
+                    }
+                    if (current < date) {
+                        dayClasses += " disabled";
+                    }
+                    if (current == date) {
+                        dayClasses += " today";
+                    }
+                    calendar +=
+                        '<td class="' +
+                        dayClasses +
+                        '" data-day="' +
+                        dayNames[(current + startDay) % 7] +
+                        '">' +
+                        current +
+                        "</td>";
+                } else {
+                    calendar += "<td></td>";
+                }
+
+                if ((current + startDay) % 7 == 0) {
+                    calendar += "</tr><tr>";
+                }
+
+                current++;
+            }
+
+            calendar += "</tr></table>";
+            container.html(calendar);
+
+            invokeCalendarListener();
+        }
+
+    </script>
 </body>
 
 </html>
