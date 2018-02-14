@@ -1,0 +1,104 @@
+<%- include ../partials/header %>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+            <div class="row">
+                <div class="col-sm-6">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Operation
+                                </th>
+
+                                <th>
+                                    Navn
+                                </th>
+
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% results.forEach(produkt => {%>
+                                <tr>
+                                    <td>
+                                        <button id=<%=produkt.id %> onclick="entfernen(this.id)">Delete</button>
+                                    </td>
+                                    <td>
+                                        <%= produkt.navn %>
+                                    </td>
+                                    <td>
+                                        <%= produkt.pris %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Opret produkt</h2>
+                    <form class="form-horizontal" role="form" method="post" action="/addProduct" onSubmit="return checkblank(this);">
+                        <% if (typeof message !== "undefined" && message.length > 0) { %>
+                            <div class="alert <%= messageType %> col-sm-12">
+                                <%= message %>
+                            </div>
+                            <% } %>
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+
+                                <% if (typeof showForm === "undefined" || showForm == true) { %>
+
+                                    <div class="form-group">
+                                        <label for="navn" class="col-md-3 control-label">Titel</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="navn">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pris" class="col-md-3 control-label">Pris</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="pris">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="varenummer" class="col-md-3 control-label">Varenummer</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="varenummer">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="beskrivelse" class="col-md-3 control-label">Beskrivelse</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="beskrivelse">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billede" class="col-md-3 control-label">Billede</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="billede">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- Button -->
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button id="btn-signup" type="submit" class="btn btn-info">
+                                                <i class="icon-hand-right"></i> &nbsp Fuldfør</button>
+
+                                        </div>
+                                    </div>
+
+
+                                    <% } %>
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ../partials/footer %>

@@ -1,0 +1,28 @@
+{
+    "items" : [
+        {
+            "id" : 1, 
+            "name" : "Home"
+        },
+        {
+            "id" : 2, 
+            "name" : "Contact"
+        },
+        {
+            "id" : 3, 
+            "name" : "Om Os"
+        },
+        {
+            "id" : 4, 
+            "name" : "Home"
+        },
+        {
+            "id" : 5, 
+            "name" : "Boooking"
+        },
+        {
+            "id" : 6, 
+            "name" : "Produkter"
+        }
+    ]
+}
