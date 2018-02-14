@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sample Site</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="container">
+        <header>
+            <nav class="navbar navbar-invert">
+                <div class="container-fluid">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="index.html">Forside</a>
+                            </li>
+                            <li>
+                                <a href="index.html">Om os</a>
+                            </li>
+                            <li>
+                                <a href="index.html">Produkter</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </header>
+        <div class="row">
+            <div class="col-md-offset-4">
+                <img src="logo.png" alt="Logo">
+            </div>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./images/slide1.jpg" alt="Billede 1">
+                    <div class="carousel-caption">
+                        <h3>Åbent Hus</h3>
+                        <p>Lørdag d. 17 kl. 10-18</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="./images/slide2.jpg" alt="Billede 2">
+                    <div class="carousel-caption">
+                        <h3>Frisør Frank Goldmann - </h3>
+                        <p>“Hår er en personlig sag, derfor står vi altid til rådighed med råd og vejledning”</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="./images/slide3.jpg" alt="Billede 3">
+                    <div class="carousel-caption">
+                        <h3>Frisør Hanna Hansen -</h3>
+                        <p>"Vi har mange års erfaring, og sælger kun produkter, der fremmer styrken i dit hår."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="space clearfix">
+            <div class="col-md-6 omos">
+                <h3>Om os</h3>
+                <p>
+                    Goldmann &amp; Moussa er en moderne frisør, som både tænker nyt og kreativt. Vi bestræber os altid på at imødekomme dine
+                    behov og ønsker, og vores dygtige frisører er altid smilende og servicemindede.
+                </p>
+                <p>
+                    Gennem de seneste mange år, har vi arbejdet med både børne- og herreklip, og tilbyder alt inden for klipning, hårfarvning
+                    og generel hårpleje.
+                </p>
+                <p>
+                    Vi er et proffesionelt lille team som består af, de to ejere: Frank Goldmann, på 39 år og Ady Moussa på 29 år og Hannah på
+                    28 De har alle omtrent 10 års erfaring og er uddannet på Københavns fineste frisørskole
+                </p>
+            </div>
+            <div class="col-md-3 col-md-offset-2 formular ">
+                <h3>Kontakt</h3>
+                <form action="">
+                    Navn:
+                    <br>
+                    <input type="text" name="">
+                    <br> Tlf:
+                    <br>
+                    <input type="text" name="">
+                    <br> Email:
+                    <br>
+                    <input type="text" name="" id="">
+                    <br> Besked:
+                    <br>
+                    <textarea name="" id="" cols="25" rows="4"></textarea>
+                    <br>
+                    <button type="submit" class="knap">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="clearfix space">
+            <div class="col-md-6">
+                <h2>Priser</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>KLIP</td>
+                            <td>250 KR</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RETNING AF HÅRKANT </td>
+                            <td>200 KR</td>
+                        </tr>
+                        <tr>
+                            <td>KLIP OG VASK</td>
+                            <td>300 KR</td>
+                        </tr>
+                        <tr>
+                            <td>PLYSMASKINE </td>
+                            <td>180 KR</td>
+                        </tr>
+                        <tr>
+                            <td>BARBERING</td>
+                            <td>200 KR</td>
+                        </tr>
+                        <tr>
+                            <td>SKÆGKLIP</td>
+                            <td>200 KR</td>
+                        </tr>
+                        <tr>
+                            <td>KLIP OG SKÆG</td>
+                            <td>400 KR</td>
+                        </tr>
+                        <tr>
+                            <td>KLIP OG BARBERING</td>
+                            <td>400 KR</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h2>Åbningstider</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Lørdag - Mandag</td>
+                            <td>10 - 18</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lørdag</td>
+                            <td>10 - 14</td>
+                        </tr>
+                        <tr>
+                            <td>Søndag</td>
+                            <td>Lukket</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Mangler indhold -->
+        <footer>
+            <div class="col-md-offset-4">
+                <p>Hejsa :D Går det godt :)</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
