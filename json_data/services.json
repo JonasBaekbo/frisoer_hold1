@@ -2,123 +2,23 @@
 	"services": [
 		{
 			"id": 1,
-			"name": "service#1",
-			"pris": "200"
+			"name": "Service#1",
+			"pris": "10"
 		},
 		{
 			"id": 2,
-			"name": "service#2",
-			"pris": "200 kr"
+			"name": "Service#2",
+			"pris": "20"
 		},
 		{
 			"id": 3,
-			"name": "service#3",
-			"pris": "200 kr"
+			"name": "Service#3",
+			"pris": "30"
 		},
 		{
 			"id": 4,
-			"name": "service#4",
-			"pris": "200 kr"
-		},
-		{
-			"id": 5,
-			"name": "HejMedDig",
-			"pris": "99"
-		},
-		{
-			"id": 6,
-			"name": "HejMedDig",
-			"pris": "88"
-		},
-		{
-			"id": 7,
-			"name": "DumDiDum",
-			"pris": "77"
-		},
-		{
-			"id": 8,
-			"name": "DumDiDum",
-			"pris": "77"
-		},
-		{
-			"id": 9,
-			"name": "Lalala",
-			"pris": "66"
-		},
-		{
-			"id": 10,
-			"name": "wekhfkjadhgk",
-			"pris": "55"
-		},
-		{
-			"id": 11,
-			"name": "idjghadgh",
-			"pris": "44"
-		},
-		{
-			"id": 12,
-			"name": "idjghadgh",
-			"pris": "44"
-		},
-		{
-			"id": 13,
-			"name": "idjghadgh",
-			"pris": "44"
-		},
-		{
-			"id": 14,
-			"name": "sdvlkasdnv",
-			"pris": "22"
-		},
-		{
-			"id": 15,
-			"name": "sdzxfsag",
-			"pris": "11"
-		},
-		{
-			"id": 16,
-			"name": "qwfgqerg",
-			"pris": "10"
-		},
-		{
-			"id": 17,
-			"name": "Kaspers Service",
-			"pris": "5"
-		},
-		{
-			"id": 18,
-			"name": "sdkjghkjas",
-			"pris": "6"
-		},
-		{
-			"id": 19,
-			"name": "rtthlrthklrth",
-			"pris": "10"
-		},
-		{
-			"id": 20,
-			"name": "sdgasdg",
-			"pris": "44"
-		},
-		{
-			"id": 21,
-			"name": "sdavsadvsad",
-			"pris": "55"
-		},
-		{
-			"id": 22,
-			"name": "test",
-			"pris": "12"
-		},
-		{
-			"id": 23,
-			"name": "test1",
-			"pris": "12"
-		},
-		{
-			"id": 24,
-			"name": "test2",
-			"pris": "12"
+			"name": "Service#4",
+			"pris": "40"
 		}
 	]
 }

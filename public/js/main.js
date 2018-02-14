@@ -109,3 +109,21 @@ function entfernen(response) {
             console.log(err);
         });
 }
+
+function deleteService(target_id) {
+    fetch('/deleteService/' + target_id, {
+        'method': 'get',
+        'headers': {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'mode': 'cors',
+        'cache': 'default'
+    })
+    .then(response => {
+        window.location.assign('http://localhost:3000/services');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+}

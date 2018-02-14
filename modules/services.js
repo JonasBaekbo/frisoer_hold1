@@ -57,11 +57,12 @@ exports.addSingle = (req, res) => {
 }
 exports.addMultiple = (req, res) => {}
 exports.deleteSingle = (req, res) => {
+    const id = req.params.id;
+    console.log(id);
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         data = JSON.parse(data);
         // console.log(data.ties);
-        data.ties.splice(req.body.id - 1, 1);
-        console.log(req.body.id);
+        data.services.splice((id - 1), 1);
         let json = JSON.stringify(data, null, "\t")
         fs.writeFile("./json_data/services.json", json, (err) => {});
     })

@@ -20,6 +20,7 @@ module.exports = function (app) {
 	app.get('/services', services.getAll);
 	app.get('/getService/:id', services.getOne);
 	app.put('/updateService/:id', services.updateOne);
+	app.get('/deleteService/:id', services.deleteSingle);
 	app.get('/services', services.getAll);
 
 	app.delete('/delProduct/:id', products.delSingle);
