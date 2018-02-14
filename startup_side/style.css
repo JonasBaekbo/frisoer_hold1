@@ -10,28 +10,52 @@ body, html {
     color: #FFF;
 }
 
-.parallax {
-    /* The image used */
-    background-color: #FFF;
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .carousel-inner>.item>img, .carousel-inner>.item>a>img{
     margin: 0 auto;
 }
 #navbar>.navbar-nav>li>a{
     color: #FFF;
+    font-size: 18px;
 }
+nav .svg-inline--fa {
+    font-size: 35px;
+  }
 .nav>li>a:hover, .nav>li>a:focus{
     background-color:#1A1A1A !important;
 }
 .carousel-control.right, .carousel-control.left{
     background: 0 !important;
 }
+.carousel-caption h3, .carousel-caption p{
+    color: #C08040;
+}
+.carousel-caption p{
+    font-size: 20px;
+}
+.space{
+    margin-top: 5em;  
+  }
+  .omos{
+      font-size: 17px;
+  }
+  .knap{
+      background-color: #f1e8e8;
+      color: #000
+      
+  }
+  .formular input, .formular textarea{
+      background-color: #1A1A1A !important;
+      border-color: #FFF;
+      margin-bottom: 10px;
+  }
+  .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+    .table>tbody>tr>td {
+        border-top-color: #1a1a1a !important;
+    }
