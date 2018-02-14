@@ -8,7 +8,6 @@ module.exports = function (app) {
 	app.get('/', navigation.index);
 	app.get('/brugere', navigation.brugere);
 	app.get('/produkter', products.getAll);
-	app.get('/produkter', navigation.produkter);
 	app.get('/content', navigation.content);
 
 	app.get('/profile', brugere.profile);
@@ -23,6 +22,6 @@ module.exports = function (app) {
 	app.put('/updateService/:id', services.updateOne);
 	app.get('/services', services.getAll);
 
-	app.del('/delProduct/:id', products.delSingle);
+	app.delete('/delProduct/:id', products.delSingle);
 	app.post('/addProduct', products.addSingle);
 };
