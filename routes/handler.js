@@ -8,7 +8,6 @@ module.exports = function (app) {
 	app.get('/', navigation.index);
 	app.get('/brugere', navigation.brugere);
 	app.get('/produkter', navigation.produkter);
-	app.get('/services', services.getAll);
 	app.get('/content', navigation.content);
 
 	app.get('/profile', brugere.profile);
@@ -18,4 +17,7 @@ module.exports = function (app) {
 	app.post('/login', brugere.login);
 
 	app.post('/addService', services.addSingle);
+	app.get('/getService/:id', services.getOne);
+	app.put('/updateService/:id', services.updateOne);
+	app.get('/services', services.getAll);
 };

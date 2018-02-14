@@ -24,7 +24,7 @@
                                 <tr>
                                     <td>
                                         <button id=<%= service.id %> onclick="edit(this.id)">Edit</button>
-                                        <button>Delete</button>
+                                        <button id=<%= service.id %> onclick="delete(this.id)">Delete</button>
                                     </td>
                                     <td>
                                         <%= service.name %>
@@ -37,7 +37,7 @@
                             </tbody>
                         </table>
             </div>
-            <div class="col-sm-6">
+            <div id="edit_div" class="col-sm-6">
                 <h2>Opret services</h2>
                 <form class="opretForm" method="post" enctype="multipart/form-data">
                     <div>
