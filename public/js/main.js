@@ -89,7 +89,7 @@ function edit(target_id) {
         });
 }
 
-function entfernen(response) {
+function entfernenErzeugnis(response) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
@@ -110,20 +110,41 @@ function entfernen(response) {
         });
 }
 
+function entfernenBenutzer(response) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    let init = {
+        method: 'delete',
+        headers: headers,
+        cache: 'no-cache',
+        mode: 'cors'
+    };
+
+    let request = new Request(`http://localhost:3000/delBruger/${response}`, init);
+
+    fetch(request)
+        .then(response => {
+            location.reload();
+        }).catch(err => {
+            console.log(err);
+        });
+}
+
 function deleteService(target_id) {
     fetch('/deleteService/' + target_id, {
-        'method': 'get',
-        'headers': {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        'mode': 'cors',
-        'cache': 'default'
-    })
-    .then(response => {
-        window.location.assign('http://localhost:3000/services');
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+            'method': 'get',
+            'headers': {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            'mode': 'cors',
+            'cache': 'default'
+        })
+        .then(response => {
+            window.location.assign('http://localhost:3000/services');
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 }

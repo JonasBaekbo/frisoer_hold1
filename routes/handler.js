@@ -5,16 +5,17 @@ const products = require('../modules/products');
 const content = require('../modules/content');
 
 module.exports = function (app) {
-	app.get('/', navigation.index);
-	app.get('/brugere', navigation.brugere);
-	app.get('/produkter', products.getAll);
+	app.get('/', products.getAllIndex);
 	app.get('/content', navigation.content);
 
 	app.get('/profile', brugere.profile);
 	app.get('/login', brugere.login);
 	app.get('/signup', brugere.signup);
+	app.post('/signup', brugere.signup);
 	app.get('/logout', brugere.logout);
 	app.post('/login', brugere.login);
+	app.delete('/delBruger/:id', brugere.delSingle);
+	app.get('/brugere', brugere.getAll);
 
 	app.post('/addService', services.addSingle);
 	app.get('/services', services.getAll);
@@ -25,4 +26,5 @@ module.exports = function (app) {
 
 	app.delete('/delProduct/:id', products.delSingle);
 	app.post('/addProduct', products.addSingle);
+	app.get('/produkter', products.getAll);
 };

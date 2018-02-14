@@ -5,6 +5,12 @@ const services = require('../json_data/services');
 const fs = require("fs");
 
 exports.getOne = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     const id = req.params.id;
     var serviceArr;
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
@@ -19,9 +25,21 @@ exports.getOne = (req, res) => {
     })
 }
 exports.getAll = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     res.render('admin/pages/services', services);
 }
 exports.updateOne = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     const id = req.params.id;
     console.log('update is reached');
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
@@ -37,8 +55,14 @@ exports.updateOne = (req, res) => {
         "message": "success"
     })
 }
-exports.updateAll = (req, res) => {}
+
 exports.addSingle = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         console.log(data);
         console.log(req.body);
@@ -55,8 +79,14 @@ exports.addSingle = (req, res) => {
         "message": "success"
     })
 }
-exports.addMultiple = (req, res) => {}
+
 exports.deleteSingle = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     const id = req.params.id;
     console.log(id);
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
@@ -67,4 +97,3 @@ exports.deleteSingle = (req, res) => {
         fs.writeFile("./json_data/services.json", json, (err) => {});
     })
 }
-exports.deleteMultiple = (req, res) => {}

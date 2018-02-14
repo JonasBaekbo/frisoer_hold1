@@ -1,4 +1,14 @@
-exports.getAll = (req, res) => {
+const servicesjson = require('../json_data/services');
+const åbningstiderjson = require('../json_data/åbningstider');
+const menuItemsjson = require('../json_data/menu_items');
+const footerjson = require('../json_data/footer');
+
+exports.getAllIndex = (req, res) => {
+    // var userId = req.session.userId;
+    // if (userId == null) {
+    //     res.redirect("/login");
+    //     return;
+    // }
     var sql = `
 			SELECT
 				*
@@ -7,7 +17,33 @@ exports.getAll = (req, res) => {
 
     db.query(sql, function (err, results) {
         if (results.length) {
-            //console.log(results);
+            console.log(menuItemsjson);
+            res.render('../views/pages/index', {
+                "servicesjson": servicesjson,
+                "åbningstiderjson": åbningstiderjson,
+                "menuItemsjson": menuItemsjson,
+                "footerjson": footerjson,
+                "results": results
+            })
+        }
+    });
+};
+
+exports.getAll = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+    var sql = `
+			SELECT
+				*
+			FROM produkter
+		`;
+
+    db.query(sql, function (err, results) {
+        if (results.length) {
+            console.log(results);
             res.render('admin/pages/produkter', {
                 results: results
             });
@@ -16,6 +52,12 @@ exports.getAll = (req, res) => {
 };
 
 exports.addSingle = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     var message = '';
     var post = req.body;
     var navn = post.navn;
@@ -72,6 +114,12 @@ exports.addSingle = (req, res) => {
 };
 
 exports.delSingle = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     db.query('DELETE FROM produkter where id = ?', [req.params.id], (err, rows) => {
         if (err) {
             console.log(err);

@@ -1,28 +1,23 @@
 {
-    "items" : [
-        {
-            "id" : 1, 
-            "name" : "Home"
+    "items": [{
+            "id": 1,
+            "name": "Forside",
+            "link": "/"
         },
         {
-            "id" : 2, 
-            "name" : "Contact"
+            "id": 2,
+            "name": "Om os",
+            "link": "#about"
         },
         {
-            "id" : 3, 
-            "name" : "Om Os"
+            "id": 3,
+            "name": "Booking",
+            "link": "#booking"
         },
         {
-            "id" : 4, 
-            "name" : "Home"
-        },
-        {
-            "id" : 5, 
-            "name" : "Boooking"
-        },
-        {
-            "id" : 6, 
-            "name" : "Produkter"
+            "id": 4,
+            "name": "Produkter",
+            "link": "#products"
         }
     ]
 }
