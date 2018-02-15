@@ -1,0 +1,26 @@
+body, html{background-color: #1A1A1A !important; color: #FFF;}
+.navbar{
+    background-color: #1A1A1A;
+    border:none;
+}
+.navbar>.container-fluid{
+    padding:0 !important;
+}
+#navbar>.navbar-nav>li>a {
+    color: #FFF;
+    font-size: 18px;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: #1A1A1A !important;
+}
+.btn-success{background-color: #1A1A1A}
+.btn-info{background-color: #FFF; color: #1A1A1A}
+.panel-heading{background-color: #FFF !important; border-color: #FFF !important}
+.panel-info{border-color: #1A1A1A !important}
+.btn-success, .btn-info{border: none;}
+.btn-success:hover, .btn-info:hover{background-color: #1A1A1A; color: #FFF}
+.panel-title{color: #1A1A1A}
+.input-group-addon{color: #1A1A1A}
+.alert-danger{background-color: #1A1A1A; color: #FFF}
+.panel-body, .panel-body table{color: #1A1A1A !important}
+button{background-color: #FFF; border: none; color: #1A1A1A; margin-top: 5px;}
