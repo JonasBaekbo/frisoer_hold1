@@ -2,7 +2,11 @@ const services = require('../json_data/services');
 // services.services.forEach(item => {
 //     console.log(item);
 // })
-const fs = require("fs");
+var os = require("os");
+var fs = require('fs');
+const writeStream = fs.createWriteStream('./logs.txt', {
+    flags: 'a'
+});
 
 exports.getOne = (req, res) => {
     var userId = req.session.userId;
