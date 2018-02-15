@@ -8,12 +8,9 @@ const writeStream = fs.createWriteStream('./logs.txt', {
     flags: 'a'
 });
 
+var date = new Date().toDateString();
+
 exports.getOne = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     const id = req.params.id;
     var serviceArr;
@@ -38,11 +35,6 @@ exports.getAll = (req, res) => {
     res.render('admin/pages/services', services);
 }
 exports.updateOne = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     const id = req.params.id;
     //console.log('update is reached');
@@ -62,11 +54,6 @@ exports.updateOne = (req, res) => {
 }
 
 exports.addSingle = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         //console.log(data);
@@ -87,11 +74,6 @@ exports.addSingle = (req, res) => {
 }
 
 exports.deleteSingle = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     const id = req.params.id;
     //console.log(id);

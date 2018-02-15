@@ -60,11 +60,6 @@ exports.getAll = (req, res) => {
 };
 
 exports.addSingle = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     var message = '';
     var post = req.body;
@@ -123,11 +118,6 @@ exports.addSingle = (req, res) => {
 };
 
 exports.delSingle = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
 
     db.query('DELETE FROM produkter where id = ?', [req.params.id], (err, rows) => {
         if (err) {

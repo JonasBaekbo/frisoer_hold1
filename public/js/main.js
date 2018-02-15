@@ -1,34 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-});
-
-function addService() {
-    event.preventDefault();
-    const data = JSON.stringify({
-        'name': form.name.value,
-        'price': form.price.value
-    });
-
-    fetch('/addService', {
-            'method': 'POST',
-            'method': 'POST',
-            'headers': {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Content-Length': data.length
-            },
-            'mode': 'cors',
-            'cache': 'default',
-            'body': data
-        })
-        .then(response => {
-            // console.log(response);
-            location.reload();
-        })
-        .catch((err) => {
-            console.log(err);
+    var form = document.querySelector('.opretForm');
+    document.querySelector('#opretKnap').addEventListener('click', event => {
+        event.preventDefault();
+        const data = JSON.stringify({
+            'name': form.name.value,
+            'price': form.price.value
         });
-}
+
+        fetch('http://localhost:3000/addService', {
+                'method': 'POST',
+                'headers': {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length
+                },
+                'mode': 'cors',
+                'cache': 'default',
+                'body': data
+            })
+            .then(response => {
+                // console.log(response);
+                location.reload();
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    });
+});
 
 function edit(target_id) {
     fetch('/getService/' + target_id, {
@@ -144,7 +142,8 @@ function deleteService(target_id) {
             'cache': 'default'
         })
         .then(response => {
-            window.location.assign('http://localhost:3000/services');
+            //window.location.assign('http://localhost:3000/services');
+            location.reload();
         })
         .catch((err) => {
             console.log(err);

@@ -1,3 +1,11 @@
+var os = require("os");
+var fs = require('fs');
+const writeStream = fs.createWriteStream('./logs.txt', {
+    flags: 'a'
+});
+
+var date = new Date().toDateString();
+
 exports.login = (req, res) => {
     if (req.method == "POST") {
         var message = '';
@@ -136,11 +144,7 @@ exports.getAll = (req, res) => {
 };
 
 exports.delSingle = (req, res) => {
-    var userId = req.session.userId;
-    if (userId == null) {
-        res.redirect("/login");
-        return;
-    }
+
     db.query('DELETE FROM brugere where id = ?', [req.params.id], (err, rows) => {
         if (err) {
             console.log(err);

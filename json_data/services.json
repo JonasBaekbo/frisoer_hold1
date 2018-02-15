@@ -1,5 +1,6 @@
 {
-	"services": [{
+	"services": [
+		{
 			"id": 1,
 			"name": "KLIP",
 			"pris": "250"
