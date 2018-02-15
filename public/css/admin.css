@@ -13,8 +13,16 @@ body, html{background-color: #1A1A1A !important; color: #FFF;}
 .nav>li>a:hover, .nav>li>a:focus {
     background-color: #1A1A1A !important;
 }
+.produkt{
+    background-color: #FFF;
+    color: #1A1A1A;
+}
+.produkt:hover{
+    background-color: #FFF;
+    color: #1A1A1A;
+}
 .btn-success{background-color: #1A1A1A}
-.btn-info{background-color: #FFF; color: #1A1A1A}
+.btn-info{background-color: #1A1A1A; color: #FFF}
 .panel-heading{background-color: #FFF !important; border-color: #FFF !important}
 .panel-info{border-color: #1A1A1A !important}
 .btn-success, .btn-info{border: none;}

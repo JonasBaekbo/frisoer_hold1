@@ -93,6 +93,9 @@ footer {
 .icon-bar{
     background-color:#FFF !important
 }
+textarea{
+    resize: none
+}
 
 @media screen and (max-width: 480px){
   p, td{
