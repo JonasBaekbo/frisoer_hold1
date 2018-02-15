@@ -87,3 +87,9 @@ nav .svg-inline--fa {
 footer {
     text-align: center!important;
 }
+.navbar-toggle{
+    border: 1px solid #FFF !important; 
+}
+.icon-bar{
+    background-color:#FFF !important
+}

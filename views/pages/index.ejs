@@ -1,6 +1,6 @@
 <%- include ../partials/header %>
     <div class="row">
-        <div class="col-md-offset-4">
+        <div class="col-md-offset-4 col-xs-offset-4">
             <img src="logo.png" alt="Logo">
         </div>
     </div>
@@ -50,7 +50,7 @@
         </a>
     </div>
     <div id="about" class="space clearfix">
-        <div class="col-md-6 omos">
+        <div class="col-md-6 col-xs-6  omos">
             <h3>Om os</h3>
             <p>
                 Goldmann &amp; Moussa er en moderne frisør, som både tænker nyt og kreativt. Vi bestræber os altid på at imødekomme dine
@@ -65,7 +65,7 @@
                 28 De har alle omtrent 10 års erfaring og er uddannet på Københavns fineste frisørskole
             </p>
         </div>
-        <div class="col-md-3 col-md-offset-2 formular ">
+        <div class="col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-2 formular ">
             <h3>Kontakt</h3>
             <form action="">
                 Navn:
@@ -86,7 +86,7 @@
         </div>
     </div>
     <div class="clearfix space">
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-6">
             <h2>Priser</h2>
             <table class="table">
                 <tbody>
@@ -103,7 +103,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-6">
             <h2>Åbningstider</h2>
             <table class="table">
                 <tbody>
@@ -132,7 +132,7 @@
         </div>
 
     </div>
-    <div class="booking col-md-offset-6">
+    <div class="booking col-md-offset-6 col-xs-offset-6">
         <div id="booking" class="clearfix wrap">
             <div class="instructions">
                 <h3>Booking</h3>
@@ -201,11 +201,11 @@
     </div>
     <div id="products" class="clearfix produkter">
         <% results.forEach(results => {%>
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <img class="col-md-10 billeder" src=<%="img/" +results.billede %>>
+            <div class="col-md-12 col-xs-12">
+                <div class="col-md-6 col-xs-6">
+                    <img class="col-xs-10 col-md-10 billeder" src=<%="img/" +results.billede %>>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-6">
                     <h3>
                         <%= results.navn %>
                     </h3>
