@@ -96,7 +96,7 @@
                                 <%= service.name %>
                             </td>
                             <td>
-                                <%= service.pris %> DKK,-
+                                <%= service.pris %>,- DKK
                             </td>
                         </tr>
                         <% }) %>
@@ -206,9 +206,12 @@
                     <img class="col-xs-10 col-md-10 billeder" src=<%="img/" +results.billede %>>
                 </div>
                 <div class="col-md-6 col-xs-6">
-                    <h3>
+                    <h2>
                         <%= results.navn %>
-                    </h3>
+                    </h2>
+                    <h4>
+                        <%= results.pris %>,- DKK
+                    </h4>
                     <p>
                         <%= results.beskrivelse %>
                     </p>
