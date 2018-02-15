@@ -33,3 +33,6 @@ body, html{background-color: #1A1A1A !important; color: #FFF;}
 .panel-body, .panel-body table{color: #1A1A1A !important}
 button{background-color: #FFF; border: none; color: #1A1A1A; margin-top: 5px;}
 td, th, label{padding:10px 10px 10px 0 !important;}
+.form-horizontal .control-label{
+    text-align: left !important;
+}
