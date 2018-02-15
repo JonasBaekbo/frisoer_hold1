@@ -54,6 +54,7 @@ exports.updateOne = (req, res) => {
     res.send(200, {
         "message": "success"
     })
+    writeStream.write(date + ` <------ Service opdateret ------->` + os.EOL, 'utf8');
 }
 
 exports.addSingle = (req, res) => {
@@ -77,7 +78,8 @@ exports.addSingle = (req, res) => {
     })
     res.send(200, {
         "message": "success"
-    })
+    });
+    writeStream.write(date + ` <------ Service oprettet ------->` + os.EOL, 'utf8');
 }
 
 exports.deleteSingle = (req, res) => {
@@ -95,5 +97,6 @@ exports.deleteSingle = (req, res) => {
         data.services.splice((id - 1), 1);
         let json = JSON.stringify(data, null, "\t")
         fs.writeFile("./json_data/services.json", json, (err) => {});
-    })
+    });
+    writeStream.write(date + ` <------ Service slettet ------->` + os.EOL, 'utf8');
 }

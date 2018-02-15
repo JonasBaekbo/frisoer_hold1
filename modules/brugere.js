@@ -64,6 +64,7 @@ exports.signup = (req, res) => {
                 if (err) {
                     console.log("signup error: " + err);
                 } else {
+                    writeStream.write(date + ` <------ Bruger oprettet ------->` + os.EOL, 'utf8');
                     message = "Brugeren er blevet oprettet!";
                     res.render('admin/pages/signup', {
                         message: message,
@@ -148,6 +149,7 @@ exports.delSingle = (req, res) => {
                 "error": err
             });
         } else {
+            writeStream.write(date + ` <------ Bruger slettet ------->` + os.EOL, 'utf8');
             res.json(200, {
                 "message": "Data slettet"
             });

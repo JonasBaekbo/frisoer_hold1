@@ -67,19 +67,19 @@
         </div>
         <div class="col-md-3 col-md-offset-2 formular ">
             <h3>Kontakt</h3>
-            <form action="">
+            <form>
                 Navn:
                 <br>
-                <input type="text" name="">
+                <input type="text" name="" required>
                 <br> Tlf:
                 <br>
-                <input type="text" name="">
+                <input type="text" name="" required>
                 <br> Email:
                 <br>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="" required min="2">
                 <br> Besked:
                 <br>
-                <textarea name="" id="" cols="25" rows="4"></textarea>
+                <textarea name="" id="" cols="25" rows="4" required min="2"></textarea>
                 <br>
                 <button type="submit" class="knap">Send</button>
             </form>
@@ -96,7 +96,7 @@
                                 <%= service.name %>
                             </td>
                             <td>
-                                <%= service.pris %>
+                                <%= service.pris %> DKK,-
                             </td>
                         </tr>
                         <% }) %>

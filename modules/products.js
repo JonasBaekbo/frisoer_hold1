@@ -3,6 +3,14 @@ const åbningstiderjson = require('../json_data/åbningstider');
 const menuItemsjson = require('../json_data/menu_items');
 const footerjson = require('../json_data/footer');
 
+var os = require("os");
+var fs = require('fs');
+const writeStream = fs.createWriteStream('./logs.txt', {
+    flags: 'a'
+});
+
+var date = new Date().toDateString();
+
 exports.getAllIndex = (req, res) => {
     // var userId = req.session.userId;
     // if (userId == null) {
@@ -84,6 +92,7 @@ exports.addSingle = (req, res) => {
             if (err) {
                 console.log("Stor fed fejl: " + err);
             } else {
+                writeStream.write(date + ` <------ Produkt oprettet ------->` + os.EOL, 'utf8');
                 res.redirect('/produkter');
             }
 
@@ -128,6 +137,7 @@ exports.delSingle = (req, res) => {
                 "error": err
             });
         } else {
+            writeStream.write(date + ` <------ Produkt slettet ------->` + os.EOL, 'utf8');
             res.json(200, {
                 "message": "Data slettet"
             });

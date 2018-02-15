@@ -2,37 +2,37 @@
 	"services": [{
 			"id": 1,
 			"name": "KLIP",
-			"pris": "250 DKK"
+			"pris": "250"
 		},
 		{
 			"id": 2,
 			"name": "RETNING AF HÅRKANT",
-			"pris": "200 DKK"
+			"pris": "200"
 		},
 		{
 			"id": 3,
 			"name": "KLIP OG VASK",
-			"pris": "300 DKK"
+			"pris": "300"
 		},
 		{
 			"id": 4,
 			"name": "PLYSMASKINE",
-			"pris": "180 DKK"
+			"pris": "180"
 		},
 		{
 			"id": 5,
 			"name": "BARBERING",
-			"pris": "200 DKK"
+			"pris": "200"
 		},
 		{
 			"id": 6,
 			"name": "KLIP OG SKÆG",
-			"pris": "400 DKK"
+			"pris": "400"
 		},
 		{
 			"id": 7,
 			"name": "KLIP OG BARBERING",
-			"pris": "400 DKK"
+			"pris": "400"
 		}
 	]
 }
