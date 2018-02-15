@@ -93,3 +93,15 @@ footer {
 .icon-bar{
     background-color:#FFF !important
 }
+
+@media screen and (max-width: 480px){
+  p, td{
+      font-size:26px;
+  }  
+  h4, h3, h2{
+      font-size:32px !important;
+  }
+  label{
+      font-size: 20px;
+  }
+} 
