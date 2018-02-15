@@ -20,7 +20,7 @@ exports.getOne = (req, res) => {
                 });
             })
             data = JSON.parse(data);
-        console.log("data.services[id - 1] = " + data.services[id - 1]);
+        //console.log("data.services[id - 1] = " + data.services[id - 1]);
         res.send(data.services[id - 1]);
     })
 }
@@ -41,7 +41,7 @@ exports.updateOne = (req, res) => {
     }
 
     const id = req.params.id;
-    console.log('update is reached');
+    //console.log('update is reached');
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         data = JSON.parse(data);
         let name = req.body.name;
@@ -64,8 +64,8 @@ exports.addSingle = (req, res) => {
     }
 
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
-        console.log(data);
-        console.log(req.body);
+        //console.log(data);
+        //console.log(req.body);
         data = JSON.parse(data);
         data.services.push({
             "id": data.services.length + 1,
@@ -88,7 +88,7 @@ exports.deleteSingle = (req, res) => {
     }
 
     const id = req.params.id;
-    console.log(id);
+    //console.log(id);
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         data = JSON.parse(data);
         // console.log(data.ties);

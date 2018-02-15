@@ -23,8 +23,8 @@
                             <% services.forEach(service => {%>
                                 <tr>
                                     <td>
-                                        <button id=<%=service.id %> onclick="edit(this.id)">Edit</button>
-                                        <button id=<%=service.id %> onclick="deleteService(this.id)">Delete</button>
+                                        <button id=<%=service.id %> onclick="edit(this.id)">Rediger</button>
+                                        <button id=<%=service.id %> onclick="deleteService(this.id)">Slet</button>
                                     </td>
                                     <td>
                                         <%= service.name %>

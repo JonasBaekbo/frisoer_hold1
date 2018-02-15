@@ -17,7 +17,7 @@ exports.getAllIndex = (req, res) => {
 
     db.query(sql, function (err, results) {
         if (results.length) {
-            console.log(menuItemsjson);
+            //console.log(menuItemsjson);
             res.render('../views/pages/index', {
                 "servicesjson": servicesjson,
                 "åbningstiderjson": åbningstiderjson,
@@ -43,7 +43,7 @@ exports.getAll = (req, res) => {
 
     db.query(sql, function (err, results) {
         if (results.length) {
-            console.log(results);
+            //console.log(results);
             res.render('admin/pages/produkter', {
                 results: results
             });
