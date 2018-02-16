@@ -2,9 +2,16 @@ const services = require('../json_data/services');
 // services.services.forEach(item => {
 //     console.log(item);
 // })
-const fs = require("fs");
+var os = require("os");
+var fs = require('fs');
+const writeStream = fs.createWriteStream('./logs.txt', {
+    flags: 'a'
+});
+
+var date = new Date().toDateString();
 
 exports.getOne = (req, res) => {
+
     const id = req.params.id;
     var serviceArr;
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
@@ -14,16 +21,23 @@ exports.getOne = (req, res) => {
                 });
             })
             data = JSON.parse(data);
-        console.log("data.services[id - 1] = " + data.services[id - 1]);
+        //console.log("data.services[id - 1] = " + data.services[id - 1]);
         res.send(data.services[id - 1]);
     })
 }
 exports.getAll = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+
     res.render('admin/pages/services', services);
 }
 exports.updateOne = (req, res) => {
+
     const id = req.params.id;
-    console.log('update is reached');
+    //console.log('update is reached');
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         data = JSON.parse(data);
         let name = req.body.name;
@@ -36,12 +50,14 @@ exports.updateOne = (req, res) => {
     res.send(200, {
         "message": "success"
     })
+    writeStream.write(date + ` <------ Service opdateret ------->` + os.EOL, 'utf8');
 }
-exports.updateAll = (req, res) => {}
+
 exports.addSingle = (req, res) => {
+
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
-        console.log(data);
-        console.log(req.body);
+        //console.log(data);
+        //console.log(req.body);
         data = JSON.parse(data);
         data.services.push({
             "id": data.services.length + 1,
@@ -53,18 +69,20 @@ exports.addSingle = (req, res) => {
     })
     res.send(200, {
         "message": "success"
-    })
+    });
+    writeStream.write(date + ` <------ Service oprettet ------->` + os.EOL, 'utf8');
 }
-exports.addMultiple = (req, res) => {}
+
 exports.deleteSingle = (req, res) => {
+
     const id = req.params.id;
-    console.log(id);
+    //console.log(id);
     fs.readFile("./json_data/services.json", "utf8", (err, data) => {
         data = JSON.parse(data);
         // console.log(data.ties);
         data.services.splice((id - 1), 1);
         let json = JSON.stringify(data, null, "\t")
         fs.writeFile("./json_data/services.json", json, (err) => {});
-    })
+    });
+    writeStream.write(date + ` <------ Service slettet ------->` + os.EOL, 'utf8');
 }
-exports.deleteMultiple = (req, res) => {}

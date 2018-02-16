@@ -1,4 +1,48 @@
+const servicesjson = require('../json_data/services');
+const åbningstiderjson = require('../json_data/åbningstider');
+const menuItemsjson = require('../json_data/menu_items');
+const footerjson = require('../json_data/footer');
+
+var os = require("os");
+var fs = require('fs');
+const writeStream = fs.createWriteStream('./logs.txt', {
+    flags: 'a'
+});
+
+var date = new Date().toDateString();
+
+exports.getAllIndex = (req, res) => {
+    // var userId = req.session.userId;
+    // if (userId == null) {
+    //     res.redirect("/login");
+    //     return;
+    // }
+    var sql = `
+			SELECT
+				*
+			FROM produkter
+		`;
+
+    db.query(sql, function (err, results) {
+        if (results.length) {
+            //console.log(menuItemsjson);
+            res.render('../views/pages/index', {
+                "servicesjson": servicesjson,
+                "åbningstiderjson": åbningstiderjson,
+                "menuItemsjson": menuItemsjson,
+                "footerjson": footerjson,
+                "results": results
+            })
+        }
+    });
+};
+
 exports.getAll = (req, res) => {
+    var userId = req.session.userId;
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
     var sql = `
 			SELECT
 				*
@@ -16,6 +60,7 @@ exports.getAll = (req, res) => {
 };
 
 exports.addSingle = (req, res) => {
+
     var message = '';
     var post = req.body;
     var navn = post.navn;
@@ -42,6 +87,7 @@ exports.addSingle = (req, res) => {
             if (err) {
                 console.log("Stor fed fejl: " + err);
             } else {
+                writeStream.write(date + ` <------ Produkt oprettet ------->` + os.EOL, 'utf8');
                 res.redirect('/produkter');
             }
 
@@ -72,6 +118,7 @@ exports.addSingle = (req, res) => {
 };
 
 exports.delSingle = (req, res) => {
+
     db.query('DELETE FROM produkter where id = ?', [req.params.id], (err, rows) => {
         if (err) {
             console.log(err);
@@ -80,6 +127,7 @@ exports.delSingle = (req, res) => {
                 "error": err
             });
         } else {
+            writeStream.write(date + ` <------ Produkt slettet ------->` + os.EOL, 'utf8');
             res.json(200, {
                 "message": "Data slettet"
             });

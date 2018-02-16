@@ -23,14 +23,14 @@
                             <% services.forEach(service => {%>
                                 <tr>
                                     <td>
-                                        <button id=<%=service.id %> onclick="edit(this.id)">Edit</button>
-                                        <button id=<%=service.id %> onclick="deleteService(this.id)">Delete</button>
+                                        <button id=<%=service.id %> onclick="edit(this.id)">Rediger</button>
+                                        <button id=<%=service.id %> onclick="deleteService(this.id)">Slet</button>
                                     </td>
                                     <td>
                                         <%= service.name %>
                                     </td>
                                     <td>
-                                        <%= service.pris %>
+                                        <%= service.pris %>,- DKK
                                     </td>
                                 </tr>
                                 <% }) %>
@@ -43,12 +43,12 @@
                         <div>
                             <label for="name">Titel: </label>
                             <br/>
-                            <input type="text" id="name" name="name" min="5" max="100" required>
+                            <input type="text" class="form-control" id="name" name="name" min="2" required>
                         </div>
                         <div>
                             <label for="price">Pris: </label>
                             <br/>
-                            <input type="number" id="price" name="price" min="5" max="100" required>
+                            <input type="number" class="form-control" id="price" name="price" min="1" required>
                         </div>
                         <button id="opretKnap" type="submit">Opret</button>
                     </form>

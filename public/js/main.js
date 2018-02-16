@@ -7,20 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
             'price': form.price.value
         });
 
-        fetch('/addService', {
-                'method': 'POST',
-                'method': 'POST',
-                'headers': {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Content-Length': data.length
-                },
-                'mode': 'cors',
-                'cache': 'default',
-                'body': data
-            })
+        fetch('http://localhost:3000/addService', {
+            'method': 'POST',
+            'headers': {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Content-Length': data.length
+            },
+            'mode': 'cors',
+            'cache': 'default',
+            'body': data
+        })
             .then(response => {
                 // console.log(response);
+                location.reload();
             })
             .catch((err) => {
                 console.log(err);
@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function edit(target_id) {
     fetch('/getService/' + target_id, {
-            'method': 'GET',
-            'headers': {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            'mode': 'cors',
-            'cache': 'default'
-        })
+        'method': 'GET',
+        'headers': {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'mode': 'cors',
+        'cache': 'default'
+    })
         .then(data => {
             return data.json();
         })
@@ -68,11 +68,11 @@ function edit(target_id) {
             <form class="editForm" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="name">Titel: </label><br/>
-                    <input type="text" id="name" name="name" value = ${response.name} min="5" max="100" required>
+                    <input type="text" class="form-control" id="name" name="name" value = ${response.name} min="5" max="100" required>
                 </div>
                 <div>
                     <label for="price">Pris: </label><br/>
-                    <input type="number" id="price" name="price"  value = ${response.pris} min="5" max="100" required>
+                    <input type="number" class="form-control" id="price" name="price"  value = ${response.pris} min="5" max="100" required>
                 </div>
                 <button type="submit" id="updateKnap" type="submit">Update</button>
             </form>
@@ -86,16 +86,16 @@ function edit(target_id) {
                 });
 
                 fetch('/updateService/' + target_id, {
-                        'method': 'PUT',
-                        'headers': {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json',
-                            'Content-Length': data.length
-                        },
-                        'mode': 'cors',
-                        'cache': 'default',
-                        'body': data
-                    })
+                    'method': 'PUT',
+                    'headers': {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length
+                    },
+                    'mode': 'cors',
+                    'cache': 'default',
+                    'body': data
+                })
                     .then(response => {
                         window.location.assign('http://localhost:3000/services');
                     })
@@ -109,7 +109,7 @@ function edit(target_id) {
         });
 }
 
-function entfernen(response) {
+function entfernenErzeugnis(response) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
@@ -130,6 +130,27 @@ function entfernen(response) {
         });
 }
 
+function entfernenBenutzer(response) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    let init = {
+        method: 'delete',
+        headers: headers,
+        cache: 'no-cache',
+        mode: 'cors'
+    };
+
+    let request = new Request(`http://localhost:3000/delBruger/${response}`, init);
+
+    fetch(request)
+        .then(response => {
+            location.reload();
+        }).catch(err => {
+            console.log(err);
+        });
+}
+
 function deleteService(target_id) {
     fetch('/deleteService/' + target_id, {
         'method': 'get',
@@ -140,10 +161,11 @@ function deleteService(target_id) {
         'mode': 'cors',
         'cache': 'default'
     })
-    .then(response => {
-        window.location.assign('http://localhost:3000/services');
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+        .then(response => {
+            //window.location.assign('http://localhost:3000/services');
+            location.reload();
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 }

@@ -23,13 +23,13 @@
                             <% results.forEach(produkt => {%>
                                 <tr>
                                     <td>
-                                        <button id=<%=produkt.id %> onclick="entfernen(this.id)">Delete</button>
+                                        <button id=<%=produkt.id %> onclick="entfernenErzeugnis(this.id)">Slet</button>
                                     </td>
                                     <td>
                                         <%= produkt.navn %>
                                     </td>
                                     <td>
-                                        <%= produkt.pris %>
+                                        <%= produkt.pris %>,- DKK
                                     </td>
                                 </tr>
                                 <% }) %>
@@ -52,51 +52,46 @@
                                 <% if (typeof showForm === "undefined" || showForm == true) { %>
 
                                     <div class="form-group">
-                                        <label for="navn" class="col-md-3 control-label">Titel</label>
-                                        <div class="col-md-9">
+                                        <label for="navn" class="control-label">Titel</label>
+                                        <div class="col-md-12">
                                             <input type="text" class="form-control" name="navn">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pris" class="col-md-3 control-label">Pris</label>
-                                        <div class="col-md-9">
+                                        <label for="pris" class="control-label">Pris</label>
+                                        <div class="col-md-12">
                                             <input type="number" class="form-control" name="pris">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="varenummer" class="col-md-3 control-label">Varenummer</label>
-                                        <div class="col-md-9">
+                                        <label for="varenummer" class="control-label">Varenummer</label>
+                                        <div class="col-md-12">
                                             <input type="number" class="form-control" name="varenummer">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="beskrivelse" class="col-md-3 control-label">Beskrivelse</label>
-                                        <div class="col-md-9">
+                                        <label for="beskrivelse" class="control-label">Beskrivelse</label>
+                                        <div class="col-md-12">
                                             <input type="text" class="form-control" name="beskrivelse">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="billede" class="col-md-3 control-label">Billede</label>
-                                        <div class="col-md-9">
+                                        <label for="billede" class="control-label">Billede</label>
+                                        <div class="col-md-12">
                                             <input type="text" class="form-control" name="billede">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <!-- Button -->
-                                        <div class="col-md-offset-3 col-md-9">
-                                            <button id="btn-signup" type="submit" class="btn btn-info">
+                                        <div class="col-md-12">
+                                            <button id="btn-signup" type="submit" class="btn produkt">
                                                 <i class="icon-hand-right"></i> &nbsp Fuldfør</button>
 
                                         </div>
                                     </div>
-
-
                                     <% } %>
-
-
                     </form>
-
                 </div>
             </div>
         </div>
