@@ -98,7 +98,11 @@ textarea{
 }
 
 @media screen and (max-width: 480px){
-  p, td{
+  body{
+      width: 98%;
+      height: auto;
+  }
+    p, td{
       font-size:26px;
   }  
   h4, h3, h2{
@@ -107,4 +111,14 @@ textarea{
   label{
       font-size: 20px;
   }
+  .formular input, .formular textarea, .knap {
+    width:98%;
+    font-size: 25px;
+}
+.instructions{
+    margin: -50px;
+}
+.first{
+    font-size: 25px;
+}
 } 
