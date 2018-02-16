@@ -26,7 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(err);
             });
     });
-});
+
+    const styles = require('../../json_data/styles.json')
+        styles.styles.forEach(style => {
+            document.getElementById('styles_select').innerHTML += `
+                <option data-link="${style.link}" id="${style.id}_option">${style.name}</option>
+            `;
+            document.getElementById('styles_select').querySelectorAll('option').forEach(option => {
+                if(option.innerHTML == "dark") {
+                    option.selected = true;
+                }
+            })
+
+        })
+        document.getElementById('styles_select').addEventListener('change', () => {
+            document.getElementById('styles_select').querySelectorAll('option').forEach(option => {
+                if(option.innerHTML == document.getElementById('styles_select').value) {
+                    document.getElementById('my_css_file').href = "./../../css/" + option.getAttribute('data-link');
+                }
+            })
+        })
+    });
 
 function edit(target_id) {
     fetch('/getService/' + target_id, {
