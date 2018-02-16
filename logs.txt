@@ -25,3 +25,14 @@ Thu Feb 15 2018 <------ Bruger slettet ------->
 Thu Feb 15 2018 <------ Bruger slettet ------->
 Thu Feb 15 2018 <------ Service opdateret ------->
 Thu Feb 15 2018 <------ Service slettet ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+<<<<<<< HEAD
+=======
+Fri Feb 16 2018 <------ Produkt oprettet ------->
+Fri Feb 16 2018 <------ Produkt slettet ------->
+Fri Feb 16 2018 <------ Bruger oprettet ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+>>>>>>> f97166231549bf19d460387853ade96f003dde87
