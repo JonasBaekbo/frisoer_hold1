@@ -27,11 +27,16 @@
 		},
 		{
 			"id": 6,
+			"name": "SKÆGKLIP",
+			"pris": "200"
+		},
+		{
+			"id": 7,
 			"name": "KLIP OG SKÆG",
 			"pris": "400"
 		},
 		{
-			"id": 7,
+			"id": 8,
 			"name": "KLIP OG BARBERING",
 			"pris": "400"
 		}
