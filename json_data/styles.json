@@ -2,23 +2,23 @@
     "styles" : [
         {
             "id" : 0,
-            "name" : "light",
-            "link" : "light.css"
-        },
-        {
-            "id" : 1,
-            "name" : "dark",
-            "link" : "dark.css"
-        },
-        {
-            "id" : 2,
             "name" : "default",
             "link" : "default.css"
         },
         {
-            "id" : 3,
+            "id" : 1,
             "name" : "red",
             "link" : "red.css"
+        },
+        {
+            "id" : 2,
+            "name" : "blue",
+            "link" : "blue.css"
+        },
+        {
+            "id" : 3,
+            "name" : "brown",
+            "link" : "brown.css"
         }
     ]
 }

@@ -2,25 +2,20 @@
 <html>
 
 <head>
+  <script src="js/script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-<<<<<<< HEAD
-  <title>Sample Site</title>
-  <link rel='stylesheet' id="dyn_style" href='/stylesheets/default.css' />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-=======
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/calender.css">
+  <link rel="stylesheet" id="dyn_style" href="/css/default.css">
+  <link rel="stylesheet" href="/css/calender.css">
   <title>Goldmann & Moussa</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/ico" href="img/logo.ico">
 
->>>>>>> 1342ca0ccbbc8f6f10641edf9b36597b6498d139
 </head>
 
 <body>
@@ -51,6 +46,15 @@
                 <% }) %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li>
+                <select id="styles_select">
+                  <% styles.styles.forEach(style => {%>
+                    <option id=<%= style.id %> data-link=<%= style.link %>>
+                        <%= style.name %>
+                    </option>
+                  <% }) %>
+                </select>
+              </li>
               <li>
                 <a href="#">
                   <i class="fab fa-facebook-square"></i>

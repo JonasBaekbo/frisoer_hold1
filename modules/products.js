@@ -2,6 +2,7 @@ const servicesjson = require('../json_data/services');
 const åbningstiderjson = require('../json_data/åbningstider');
 const menuItemsjson = require('../json_data/menu_items');
 const footerjson = require('../json_data/footer');
+const stylesjson = require('../json_data/styles');
 
 var os = require("os");
 var fs = require('fs');
@@ -31,7 +32,8 @@ exports.getAllIndex = (req, res) => {
                 "åbningstiderjson": åbningstiderjson,
                 "menuItemsjson": menuItemsjson,
                 "footerjson": footerjson,
-                "results": results
+                "results": results,
+                "styles" : stylesjson
             })
         }
     });
