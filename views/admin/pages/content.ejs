@@ -1,0 +1,163 @@
+<%- include ../partials/header %>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+            <div class="row">
+                <h2>Menu Items</h2>
+                <div class="col-sm-6">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Operation
+                                </th>
+
+                                <th>
+                                    Navn
+                                </th>
+
+                                <th>
+                                    Link
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% menu_items.items.forEach(item => {%>
+                                <tr>
+                                    <td>
+                                        <button id=<%=item.id %> onclick="edit(this.id)">Rediger</button>
+                                        <button id=<%=item.id %> onclick="deleteMenuItem(this.id)">Slet</button>
+                                    </td>
+                                    <td>
+                                        <%= item.name %>
+                                    </td>
+                                    <td>
+                                        <%= item.link %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="edit_div" class="col-sm-6">
+                    <h2>Opret Menu Item</h2>
+                    <form class="opretForm" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="name">Titel: </label>
+                            <br/>
+                            <input type="text" class="form-control" id="name" name="name" min="2" required>
+                        </div>
+                        <div>
+                            <label for="link">Link: </label>
+                            <br/>
+                            <input type="number" class="form-control" id="link" name="link" min="1" required>
+                        </div>
+                        <button id="menu_item_opretKnap" type="submit">Opret</button>
+                    </form>
+
+                </div>
+                <h2>Footer Items</h2>
+                <div class="col-sm-6">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Operation
+                                </th>
+
+                                <th>
+                                    Navn
+                                </th>
+
+                                <th>
+                                    Link
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% footer_items.footer.forEach(item => {%>
+                                <tr>
+                                    <td>
+                                        <button id=<%= %> onclick="edit(this.id)">Rediger</button>
+                                        <button id=<%= %> onclick="deleteFoooterItem(this.id)">Slet</button>
+                                    </td>
+                                    <td>
+                                        <%= item.name %>
+                                    </td>
+                                    <td>
+                                        <%= item.link %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="edit_div" class="col-sm-6">
+                    <h2>Opret Menu Item</h2>
+                    <form class="opretForm" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="name">Titel: </label>
+                            <br/>
+                            <input type="text" class="form-control" id="name" name="name" min="2" required>
+                        </div>
+                        <div>
+                            <label for="link">Link: </label>
+                            <br/>
+                            <input type="number" class="form-control" id="link" name="link" min="1" required>
+                        </div>
+                        <button id="menu_item_opretKnap" type="submit">Opret</button>
+                    </form>
+
+                </div>
+                <h2>Opening Hours</h2>
+                <div class="col-sm-6">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Operation
+                                </th>
+
+                                <th>
+                                    Navn
+                                </th>
+
+                                <th>
+                                    Tidsrum
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% opening_hours.åbningstider.forEach(hour => {%>
+                                <tr>
+                                    <td>
+                                        <button id=<%= %> onclick="editHour(this.id)">Rediger</button>
+                                        <button id=<%= %> onclick="deletehour(this.id)">Slet</button>
+                                    </td>
+                                    <td>
+                                        <%= hour.name %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="edit_div" class="col-sm-6">
+                    <h2>Opret Åbningstid</h2>
+                    <form class="opretForm" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="days">Dage: </label>
+                            <br/>
+                            <input type="text" class="form-control" id="days" name="days" min="2" required>
+                        </div>
+                        <div>
+                            <label for="timeframe">Tidsrum: </label>
+                            <br/>
+                            <input type="text" class="form-control" id="timeframe" name="timeframe" min="1" required>
+                        </div>
+                        <button id="footer_item_opretKnap" type="submit">Opret</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ../partials/footer %>

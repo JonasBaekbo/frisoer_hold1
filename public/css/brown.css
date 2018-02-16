@@ -1,17 +1,13 @@
-#styles_select {
-    color: brown;
-}
-
 body, html {
     height: 100%;
     width: 1040px;
     margin: 0 auto;
-    background-color: #1A1A1A;
+    background-color: #392613;
     color: #FFF;
 }
 
 #container {
-    background-color: #1A1A1A;
+    background-color: #392613;
     color: #FFF;
 }
 
@@ -29,7 +25,7 @@ nav .svg-inline--fa {
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
-    background-color: #1A1A1A !important;
+    background-color: #392613 !important;
 }
 
 .carousel-control.right, .carousel-control.left {
@@ -62,7 +58,7 @@ nav .svg-inline--fa {
 }
 
 .formular input, .formular textarea {
-    background-color: #1A1A1A !important;
+    background-color: #392613 !important;
     border-color: #FFF;
     margin-bottom: 10px;
 }
@@ -77,7 +73,7 @@ nav .svg-inline--fa {
 }
 
 .table>tbody>tr>td {
-    border-top-color: #1a1a1a !important;
+    border-top-color: #392613 !important;
 }
 
 .billeder {

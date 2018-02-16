@@ -25,3 +25,5 @@ Thu Feb 15 2018 <------ Bruger slettet ------->
 Thu Feb 15 2018 <------ Bruger slettet ------->
 Thu Feb 15 2018 <------ Service opdateret ------->
 Thu Feb 15 2018 <------ Service slettet ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
