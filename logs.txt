@@ -30,3 +30,6 @@ Fri Feb 16 2018 <------ Service opdateret ------->
 Fri Feb 16 2018 <------ Produkt oprettet ------->
 Fri Feb 16 2018 <------ Produkt slettet ------->
 Fri Feb 16 2018 <------ Bruger oprettet ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
+Fri Feb 16 2018 <------ Service opdateret ------->
